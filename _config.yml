@@ -6,8 +6,8 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: fastpages
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+title: Suvaditya Mukherjee
+description: Deep Learning, CV, AI
 github_username: suvadityamuk
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "portfolio"
@@ -49,10 +49,10 @@ use_math:
 show_description: true
 
 # Set this to true to display image previews on home page, if they exist
-show_image: false
+show_image: true
 
 # Set this to true to turn on annotations with hypothes.is (https://web.hypothes.is/)
-annotations: false
+annotations: true
 
 # Set this to true to display tags on each post
 show_tags: true
@@ -78,7 +78,7 @@ default_badges:
 
 # Escape HTML in post descriptions
 html_escape:
-  description: false
+  description: true
 
 # Everything below here should be left alone. Modifications may break fastpages
 future: true

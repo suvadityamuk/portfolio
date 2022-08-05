@@ -8,7 +8,7 @@ permalink: /about/
 **Hello!**  
 My name is **Suvaditya Mukherjee**. I am a student of the __Bachelors in Artificial Intelligence Programme at NMIMS MPSTME, Mumbai__.
 
-I have played around and dabbled in many different disciplines of Computer Science in a quest to find out what excites me the most, and I have realized that Deep Learning and its applications in solving Real-world problems are the best way I see myself utilizing my skills for bettering the community.  
+I have played around and dabbled in many different disciplines of Computer Science in a quest to find out what excites me the most, and I have realized that Deep Learning and its applications in solving Real-world problems is the best way I see myself utilizing my skills for bettering the community.  
 
 I am a former Lead of the [Google Developer Student Club](https://www.gdscmpstme.com) at NMIMS MPSTME Mumbai and the former Co-Head of the Technical Software department at the [International Society of Automation](http://www.isampstme.com/), NMIMS MPSTME Mumbai.  
 

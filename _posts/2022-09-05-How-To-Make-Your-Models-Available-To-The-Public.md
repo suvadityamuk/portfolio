@@ -7,7 +7,7 @@ branch: master
 badges: true
 comments: true
 categories: [mlops, docker, computer-vision, ai]
-image: images/docker-blog/mlops-loop-dockerblog2.jpg
+image: images/docker-blog/mlops-loop-dockerblog.png
 hide: false
 search_exclude: false
 author: Suvaditya Mukherjee
@@ -443,6 +443,15 @@ This numpy array is then passed into <code>keras.applications.imagenet_utils.dec
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="6)-Define-a-simple-GitHub-Actions-workflow-to-build-your-image-every-time-you-push-it-to-your-repository">6) Define a simple GitHub Actions workflow to build your image every time you push it to your repository<a class="anchor-link" href="#6)-Define-a-simple-GitHub-Actions-workflow-to-build-your-image-every-time-you-push-it-to-your-repository"> </a></h2><p>Here, as an extra step, we use GitHub Actions to build our image as a test every time a Push is made to any branch or if a PR is merged in the repository. This needs to be added only if you are preparing a repository on GitHub for your model.</p>
+<ul>
+<li><code>name</code> : Assigns a name to the workflow</li>
+<li><code>on</code> : Defines the triggers for when the workflow is to be used</li>
+<li><code>env</code> : Sets environment variables</li>
+<li><code>jobs</code> : Defines the different commands and workflow actions to be run as part of the current workflow</li>
+<li><code>runs-on</code> : Defines which GitHub-hosted runner is used for execution of workflow</li>
+<li><code>actions/checkout@v3</code> : Used to check-out the code from repository</li>
+<li><code>Build Docker Image</code> : Build image from Dockerfile present in repository</li>
+</ul>
 
 </div>
 </div>
@@ -489,22 +498,7 @@ This numpy array is then passed into <code>keras.applications.imagenet_utils.dec
 <p align="center">Terminal command</p><p><img src="/portfolio/images/copied_from_nb/../images/docker-blog/health-check.png" alt=""></p>
 <p align="center">GET request on health-check</p><p><img src="/portfolio/images/copied_from_nb/../images/docker-blog/inference.png" alt=""></p>
 <p align="center">GET request on inference</p><p><img src="/portfolio/images/copied_from_nb/../images/docker-blog/goldfish.jpg" alt=""></p>
-<p align="center">The Goldfish image sent for request via Postman </p><!-- 
-| ![](../images/docker-blog/terminal.png) | 
-|:--:| 
-| **Terminal command** |  
-
-| ![](../images/docker-blog/health-check.png) | 
-|:--:| 
-| **GET request on health-check** |  
-
-| ![](../images/docker-blog/inference.png) | 
-|:--:| 
-| **GET request on inference** |  
-
-| ![](../images/docker-blog/goldfish.jpg) | 
-|:--:| 
-| **The Goldfish image sent for request via Postman** |   -->
+<p align="center">The Goldfish image sent for request via Postman </p>
 </div>
 </div>
 </div>

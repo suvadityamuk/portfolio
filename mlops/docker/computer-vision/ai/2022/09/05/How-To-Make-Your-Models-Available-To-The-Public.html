@@ -14,14 +14,14 @@
 <link rel="canonical" href="https://suvadityamuk.github.io/portfolio/mlops/docker/computer-vision/ai/2022/09/05/How-To-Make-Your-Models-Available-To-The-Public.html" />
 <meta property="og:url" content="https://suvadityamuk.github.io/portfolio/mlops/docker/computer-vision/ai/2022/09/05/How-To-Make-Your-Models-Available-To-The-Public.html" />
 <meta property="og:site_name" content="Suvaditya Mukherjee" />
-<meta property="og:image" content="https://suvadityamuk.github.io/portfolio/images/docker-blog/mlops-loop-dockerblog2.jpg" />
+<meta property="og:image" content="https://suvadityamuk.github.io/portfolio/images/docker-blog/mlops-loop-dockerblog.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2022-09-05T00:00:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://suvadityamuk.github.io/portfolio/images/docker-blog/mlops-loop-dockerblog2.jpg" />
+<meta property="twitter:image" content="https://suvadityamuk.github.io/portfolio/images/docker-blog/mlops-loop-dockerblog.png" />
 <meta property="twitter:title" content="How to make your models available to the public" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Suvaditya Mukherjee"},"dateModified":"2022-09-05T00:00:00-05:00","datePublished":"2022-09-05T00:00:00-05:00","description":"Explaining how to use Docker, Flask and Gunicorn to deploy your models online","headline":"How to make your models available to the public","image":"https://suvadityamuk.github.io/portfolio/images/docker-blog/mlops-loop-dockerblog2.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://suvadityamuk.github.io/portfolio/mlops/docker/computer-vision/ai/2022/09/05/How-To-Make-Your-Models-Available-To-The-Public.html"},"url":"https://suvadityamuk.github.io/portfolio/mlops/docker/computer-vision/ai/2022/09/05/How-To-Make-Your-Models-Available-To-The-Public.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Suvaditya Mukherjee"},"dateModified":"2022-09-05T00:00:00-05:00","datePublished":"2022-09-05T00:00:00-05:00","description":"Explaining how to use Docker, Flask and Gunicorn to deploy your models online","headline":"How to make your models available to the public","image":"https://suvadityamuk.github.io/portfolio/images/docker-blog/mlops-loop-dockerblog.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://suvadityamuk.github.io/portfolio/mlops/docker/computer-vision/ai/2022/09/05/How-To-Make-Your-Models-Available-To-The-Public.html"},"url":"https://suvadityamuk.github.io/portfolio/mlops/docker/computer-vision/ai/2022/09/05/How-To-Make-Your-Models-Available-To-The-Public.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/portfolio/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://suvadityamuk.github.io/portfolio/feed.xml" title="Suvaditya Mukherjee" /><!-- the google_analytics_id gets auto inserted from the config file -->
 
@@ -115,7 +115,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      9 min read
     
 </span></p>
 
@@ -706,6 +706,22 @@ This numpy array is then passed into <code>keras.applications.imagenet_utils.dec
 <a class="anchor" href="#6)-Define-a-simple-GitHub-Actions-workflow-to-build-your-image-every-time-you-push-it-to-your-repository" aria-hidden="true"><span class="octicon octicon-link"></span></a>6) Define a simple GitHub Actions workflow to build your image every time you push it to your repository<a class="anchor-link" href="#6)-Define-a-simple-GitHub-Actions-workflow-to-build-your-image-every-time-you-push-it-to-your-repository"> </a>
 </h2>
 <p>Here, as an extra step, we use GitHub Actions to build our image as a test every time a Push is made to any branch or if a PR is merged in the repository. This needs to be added only if you are preparing a repository on GitHub for your model.</p>
+<ul>
+<li>
+<code>name</code> : Assigns a name to the workflow</li>
+<li>
+<code>on</code> : Defines the triggers for when the workflow is to be used</li>
+<li>
+<code>env</code> : Sets environment variables</li>
+<li>
+<code>jobs</code> : Defines the different commands and workflow actions to be run as part of the current workflow</li>
+<li>
+<code>runs-on</code> : Defines which GitHub-hosted runner is used for execution of workflow</li>
+<li>
+<code>actions/checkout@v3</code> : Used to check-out the code from repository</li>
+<li>
+<code>Build Docker Image</code> : Build image from Dockerfile present in repository</li>
+</ul>
 
 </div>
 </div>
@@ -760,22 +776,6 @@ This numpy array is then passed into <code>keras.applications.imagenet_utils.dec
 <p align="center">GET request on inference</p>
 <p><img src="/portfolio/images/copied_from_nb/../images/docker-blog/goldfish.jpg" alt=""></p>
 <p align="center">The Goldfish image sent for request via Postman </p>
-<!-- 
-| ![](../images/docker-blog/terminal.png) | 
-|:--:| 
-| **Terminal command** |  
-
-| ![](../images/docker-blog/health-check.png) | 
-|:--:| 
-| **GET request on health-check** |  
-
-| ![](../images/docker-blog/inference.png) | 
-|:--:| 
-| **GET request on inference** |  
-
-| ![](../images/docker-blog/goldfish.jpg) | 
-|:--:| 
-| **The Goldfish image sent for request via Postman** |   -->
 </div>
 </div>
 </div>
